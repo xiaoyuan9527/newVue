@@ -9,3 +9,4 @@
     vant插件ui
     npm i -S vuex vuex-persistedstate vue-router axios
     npm i -D less@4 less-loader@7
+    npm i vant -s
