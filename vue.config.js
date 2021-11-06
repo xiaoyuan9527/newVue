@@ -11,6 +11,7 @@ module.exports = {
         }
     },
 
+    // ajax设置修改部分
     // 端口设置
     devServer: {
         // 这里我选择了本地端口8080
