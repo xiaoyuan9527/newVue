@@ -4,11 +4,29 @@
         <span>
             <button @click="goBack">离开</button>
         </span>
+        <slot-page :state="state" >
+            <!--  -->
+            <template v-slot:header="data">
+            <!-- 这是简写 -->
+            <!-- <template #header > -->
+                <button  >这是slot插入的{{data.state}}</button>
+            </template>
+            <button>这是不具名</button>
+        </slot-page>
     </div>
 </template>
 <script>
+    import SlotPage from './slotPage.vue'
     export default {
-        methods: {
+        data() {
+            return {
+                state: "xiaoyuan"
+            }
+        },
+        components: {
+            SlotPage
+        },
+        methods:{
             goBack() {
                 this.$router.push('/home')
             }
