@@ -5,7 +5,8 @@
             <button @click="goBack">离开</button>
         </span>
         <slot-page :state="state" >
-            <!--  -->
+            <!-- :header代表具名插槽   ="参数"，从具名参数传来的值 -->
+            <!-- data是一个对象数组，需要data.传递的值 -->
             <template v-slot:header="data">
             <!-- 这是简写 -->
             <!-- <template #header > -->

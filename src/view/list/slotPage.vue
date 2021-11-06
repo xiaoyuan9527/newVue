@@ -4,6 +4,7 @@
         <br>
         <div>
             <input type="text" v-model="data">
+            <!-- 具名插槽，name是具名，:state向父组件传递值 -->
             <slot name="header" :state="state" />
         </div>
         <div>
