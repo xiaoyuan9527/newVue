@@ -10,6 +10,9 @@ import Home from '../view/home'
 import List from '../view/list'
 import NotFound from '../view/common/NotFound'
 
+// 引入store
+import store from '../store'
+
 const routes = [
     // 重定向，/为login
     { path: '/', redirect: '/login' },
@@ -32,10 +35,14 @@ router.beforeEach(function(to, from, next) {
     // 模拟一条token
     // 注释掉清除localStore数据就没了
     // 可以判断是否有登陆凭证
-    localStorage.setItem('token', 'xxx')
+    // localStorage.setItem('token', 'xxx')
     // 取得该token
-    let token = localStorage.getItem('token')
+    // let token = localStorage.getItem('token')
 
+    // 从store中取值
+    // this.$router只能在vue文件中引用，所以这儿要引入store中的index.js
+
+    let token = store.getters['common/token']
     
     if (token) {
         next()
