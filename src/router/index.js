@@ -9,6 +9,7 @@ import Login from '../view/login'
 import Home from '../view/home'
 import List from '../view/list'
 import NotFound from '../view/common/NotFound'
+import Filter from '../view/list/filter'
 
 // 引入store
 import store from '../store'
@@ -19,6 +20,7 @@ const routes = [
     { path: '/login', component: Login, meta: { title: 'router' } },
     { path: '/home', component: Home },
     { path: '/list', component: List },
+    { path: '/filter', component: Filter },
     { path: '/404', component: NotFound },
     // 未知路由的情况自动跳转到404
     { path: '*', redirect: '/404' },
