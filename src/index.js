@@ -13,6 +13,11 @@ Vue.use(Vant)
 // 全局引入[自定义的放后面，因为样式会被覆盖，我们想要修改的直接覆盖掉就好]
 import './style/index.less'
 
+// 自定义组件全局引入
+import Plguin from './components'
+
+Vue.use(Plguin)
+
 new Vue({
     store,
     router,

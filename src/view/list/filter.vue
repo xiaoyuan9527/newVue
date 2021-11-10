@@ -5,6 +5,7 @@
             <button @click="getTime">获取当前时间</button>
             <!-- 过滤器使用方法将date的值替换为filterTime的返回值 -->
             <span>{{date | filterTime}}</span>
+            <span>{{time | filterNew}}</span>
         </span>
     </div>
 </template>
@@ -12,7 +13,8 @@
     export default {
         data() {
             return {
-                date: '2021年11月1日'
+                date: '2021年11月1日',
+                time: '20:20'
             }
         },
         filters: {
