@@ -1,6 +1,9 @@
 module.exports = {
     // 设置是否开启lint检测
     lintOnSave: false,
+    
+    // 打包专用路径
+    publicPath: './',
 
     // vue是单页面开发这里可以设置多页面开发
     // 设置多页面模式

@@ -5,11 +5,19 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // 引入需要重定向的组件
-import Login from '../view/login'
-import Home from '../view/home'
-import List from '../view/list'
-import NotFound from '../view/common/NotFound'
-import Filter from '../view/list/filter'
+// 优化方法，拆包(一次性引入项目过大)
+
+// import Login from '../view/login'
+// import Home from '../view/home'
+// import List from '../view/list'
+// import NotFound from '../view/common/NotFound'
+// import Filter from '../view/list/filter'
+
+const Login = ()=> import('../view/login')
+const Home = ()=> import('../view/home')
+const List = ()=> import('../view/list')
+const NotFound = ()=> import('../view/common/NotFound')
+const Filter = ()=> import('../view/list/filter')
 
 // 引入store
 import store from '../store'
